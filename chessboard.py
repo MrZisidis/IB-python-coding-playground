@@ -1,5 +1,7 @@
 def chessboard(number):
+    number = int(input("type a number: "))
     for row in range(number):
+
         row_text = ""
         # print("row is: ", row)
         for col in range(number):
@@ -12,4 +14,4 @@ def chessboard(number):
                 row_text = row_text + "0"
         print(row_text)
 
-chessboard(3)
+chessboard(4)
