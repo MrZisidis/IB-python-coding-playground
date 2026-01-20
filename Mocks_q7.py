@@ -4,4 +4,4 @@ def clean_school_email(email: str) -> str:
         name = name.replace(d, "")
     return name
 
-clean_school_email("stefanos2343@stcats.gr")
+print(clean_school_email("stefanos2343@stcats.gr"))
