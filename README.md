@@ -24,7 +24,7 @@ IB-python-coding-playground/
 
 Visit the GitHub Pages interface to browse repository files with a user-friendly interface:
 
-**[IB CS Python Playground](https://mrzisidis.github.io/ib-cs-mini-websites/python_playground.html/)**
+**[IB CS Python Playground](https://mrzisidis.github.io/ib-cs-mini-websites/python_playground.html)**
 
 The interface provides:
 - 📂 Interactive folder navigation
