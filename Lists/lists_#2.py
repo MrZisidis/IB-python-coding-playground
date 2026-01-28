@@ -1,7 +1,7 @@
 #methods of adding elements
 # numbers = []
 # shoe_sizes = []
-#
+
 # numbers.append(5)
 # numbers.append(10)
 # numbers.append(3)
