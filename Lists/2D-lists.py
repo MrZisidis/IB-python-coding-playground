@@ -15,6 +15,7 @@ for i in range(len(persons)):
     # print(persons[i][0])
     if persons[i][0] =="Betty":
         print("FOUND!")
+print(persons.__sizeof__())
 
 
 # for person in persons:
