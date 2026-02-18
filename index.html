@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IB Python Coding Playground - Repository Files</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #161b22;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #21262d;
+            padding: 16px 24px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #58a6ff;
+        }
+
+        .breadcrumb {
+            padding: 16px 24px;
+            background-color: #0d1117;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .breadcrumb-item {
+            color: #58a6ff;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb-item:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb-separator {
+            color: #8b949e;
+        }
+
+        .file-list {
+            padding: 0;
+        }
+
+        .file-item {
+            padding: 12px 24px;
+            border-bottom: 1px solid #21262d;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: background-color 0.2s;
+        }
+
+        .file-item:hover {
+            background-color: #1c2128;
+        }
+
+        .file-icon {
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .file-icon svg {
+            fill: #8b949e;
+        }
+
+        .folder-icon svg {
+            fill: #58a6ff;
+        }
+
+        .file-name {
+            color: #58a6ff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .folder-name {
+            color: #58a6ff;
+            font-weight: 600;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .back-button {
+            margin: 16px 24px;
+            padding: 8px 16px;
+            background-color: #21262d;
+            color: #58a6ff;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-button:hover {
+            background-color: #30363d;
+        }
+
+        footer {
+            padding: 16px 24px;
+            text-align: center;
+            color: #8b949e;
+            font-size: 12px;
+            border-top: 1px solid #30363d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📁 IB Python Coding Playground - Repository Files</h1>
+        </header>
+
+        <div class="breadcrumb">
+            <span class="breadcrumb-item" id="rootBreadcrumb">Repository</span>
+            <span class="breadcrumb-separator hidden" id="separator">/</span>
+            <span class="breadcrumb-item hidden" id="folderBreadcrumb"></span>
+        </div>
+
+        <button class="back-button hidden" id="backButton">
+            <span>←</span>
+            <span>Back to root</span>
+        </button>
+
+        <div class="file-list" id="rootView">
+            <!-- Root directory Python files -->
+            <div class="file-item" onclick="openFile('Flowcharts_1.py')">
+                <div class="file-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H5.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name">Flowcharts_1.py</span>
+            </div>
+
+            <div class="file-item" onclick="openFile('Python_functions.py')">
+                <div class="file-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H5.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name">Python_functions.py</span>
+            </div>
+
+            <div class="file-item" onclick="openFile('chessboard.py')">
+                <div class="file-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H5.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name">chessboard.py</span>
+            </div>
+
+            <div class="file-item" onclick="openFile('function_word_squared.py')">
+                <div class="file-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H5.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name">function_word_squared.py</span>
+            </div>
+
+            <div class="file-item" onclick="openFile('print_many_times.py')">
+                <div class="file-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H5.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name">print_many_times.py</span>
+            </div>
+
+            <div class="file-item" onclick="openFile('yulika_hw.py')">
+                <div class="file-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H5.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name">yulika_hw.py</span>
+            </div>
+
+            <!-- Mocks Folder -->
+            <div class="file-item" onclick="openFolder('Mocks')">
+                <div class="file-icon folder-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.75 1A1.75 1.75 0 000 2.75v10.5C0 14.216.784 15 1.75 15h12.5A1.75 1.75 0 0016 13.25v-8.5A1.75 1.75 0 0014.25 3H7.5a.25.25 0 01-.2-.1l-.9-1.2C6.07 1.26 5.55 1 5 1H1.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name folder-name">📂 Mocks</span>
+            </div>
+        </div>
+
+        <div class="file-list hidden" id="mocksView">
+            <!-- Files inside Mocks folder -->
+            <div class="file-item" onclick="openFile('Mocks/Mocks_q7.py')">
+                <div class="file-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H5.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name">Mocks_q7.py</span>
+            </div>
+
+            <div class="file-item" onclick="openFile('Mocks/mocks_q8.py')">
+                <div class="file-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H5.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name">mocks_q8.py</span>
+            </div>
+
+            <div class="file-item" onclick="openFile('Mocks/mocks_q9.py')">
+                <div class="file-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H5.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name">mocks_q9.py</span>
+            </div>
+
+            <div class="file-item" onclick="openFile('Mocks/test.py')">
+                <div class="file-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v9.586A1.75 1.75 0 0113.25 16h-9.5A1.75 1.75 0 012 14.25V1.75zm1.75-.25a.25.25 0 00-.25.25v12.5c0 .138.112.25.25.25h9.5a.25.25 0 00.25-.25V4.664a.25.25 0 00-.073-.177l-2.914-2.914a.25.25 0 00-.177-.073H5.75z"/>
+                    </svg>
+                </div>
+                <span class="file-name">test.py</span>
+            </div>
+        </div>
+
+        <footer>
+            <p>IB Python Coding Playground © 2026 | GitHub Repository Browser</p>
+        </footer>
+    </div>
+
+    <script>
+        let currentView = 'root';
+
+        function openFolder(folderName) {
+            if (folderName === 'Mocks') {
+                currentView = 'mocks';
+                document.getElementById('rootView').classList.add('hidden');
+                document.getElementById('mocksView').classList.remove('hidden');
+                document.getElementById('backButton').classList.remove('hidden');
+                document.getElementById('separator').classList.remove('hidden');
+                document.getElementById('folderBreadcrumb').classList.remove('hidden');
+                document.getElementById('folderBreadcrumb').textContent = 'Mocks';
+            }
+        }
+
+        function goBack() {
+            currentView = 'root';
+            document.getElementById('rootView').classList.remove('hidden');
+            document.getElementById('mocksView').classList.add('hidden');
+            document.getElementById('backButton').classList.add('hidden');
+            document.getElementById('separator').classList.add('hidden');
+            document.getElementById('folderBreadcrumb').classList.add('hidden');
+        }
+
+        function openFile(fileName) {
+            // Open the file in GitHub
+            const repoUrl = 'https://github.com/MrZisidis/IB-python-coding-playground/blob/main/';
+            window.open(repoUrl + fileName, '_blank');
+        }
+
+        // Set up back button
+        document.getElementById('backButton').addEventListener('click', goBack);
+        document.getElementById('rootBreadcrumb').addEventListener('click', goBack);
+    </script>
+</body>
+</html>
