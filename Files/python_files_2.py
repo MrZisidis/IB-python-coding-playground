@@ -1,4 +1,4 @@
-with open("example.txt") as new_file:
+with open("../example.txt") as new_file:
     count = 0
     total_length = 0
 
