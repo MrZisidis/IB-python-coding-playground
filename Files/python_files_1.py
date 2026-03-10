@@ -1,4 +1,4 @@
-myFile = open("../names.txt")
+myFile = open("names.txt")
 # print(myFile) # prints that it's loaded in the memory
 
 # contents = myFile.read()
