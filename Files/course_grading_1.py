@@ -38,20 +38,22 @@ with open(exercise_data) as exercise_file:
         exercises.append(parts)
     print(exercises)
 
-for id in students:
-    total_exercises = 0
-    # if id[0] == exercises[0][0]:
-    #     print(id[1] + " " + id[2])
-    #     for item in range (1, len(exercises[0])):
-    #         total_exercises = total_exercises + int(exercises[0][item])
-    #     print("the number of exercises completed: ", total_exercises)
-    for x in range (0, len(students) ):
-        if id[0] == exercises[x][0]:
-            print(id[1] + " " + id[2])
-            for item in range (1, len(exercises[x])):
-                total_exercises = total_exercises + int(exercises[x][item])
-            print("the number of exercises completed: ", total_exercises)
 
-with open("new_file.txt", "w") as my_file:
+with open("students_stats.txt", "w") as my_file:
     # code to write something to the file
-    my_file.write("Hello there!\n")
+    for id in students:
+        total_exercises = 0
+        # if id[0] == exercises[0][0]:
+        #     print(id[1] + " " + id[2])
+        #     for item in range (1, len(exercises[0])):
+        #         total_exercises = total_exercises + int(exercises[0][item])
+        #     print("the number of exercises completed: ", total_exercises)
+        for x in range(0, len(students)):
+            if id[0] == exercises[x][0]:
+                print(id[1] + " " + id[2])
+                my_file.write(id[1] + " " + id[2] + " " )
+                for item in range(1, len(exercises[x])):
+                    total_exercises = total_exercises + int(exercises[x][item])
+                print("the number of exercises completed: ", total_exercises)
+                my_file.write(str(total_exercises) + "\n")
+
