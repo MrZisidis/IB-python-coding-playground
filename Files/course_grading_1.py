@@ -6,6 +6,11 @@
 #     student_info = "students1.csv"
 #     exercise_data = "exercises1.csv"
 
+# import csv
+#
+# with open("students.csv") as f:
+#     reader = csv.reader(f, delimiter=";")
+
 students = []
 exercises = []
 
@@ -15,8 +20,8 @@ if False:
     exercise_data = input("Exercises completed: ")
 else:
     # hard-coded input
-    student_info = "students.txt"
-    exercise_data = "exercises.txt"
+    student_info = "students.csv"
+    exercise_data = "exercises.csv"
 
 with open(student_info) as student_file:
     for line in student_file:
