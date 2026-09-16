@@ -4,7 +4,7 @@
 def hash_square(length):
     for i in range(length):
         print("#" * length)
-    # return "#" * length
+    return "#" * length
 print(hash_square(3))
 print(hash_square(4))
 
@@ -13,8 +13,8 @@ print(hash_square(4))
 # The function takes an integer argument, which specifies the length of the side of the board.
 # See the examples below for details:
 
-def chessboard(length):
-    for i in range(length):
+# def chessboard(length):
+#     for i in range(length):
 
 
 

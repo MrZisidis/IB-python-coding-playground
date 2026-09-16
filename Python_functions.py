@@ -9,6 +9,7 @@ def odds(n):
     for i in range(n+1):  #i local variBLE
         if i % 2 == 1:
             print(i)
+    return
 
 randomNumber = random.randint(0,100)
 
